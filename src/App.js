@@ -36,9 +36,10 @@ function App() {
         <a
           href="/resume.pdf"
           className="btn btn-primary mt-3"
-          download
+          target="__blank"
+          rel="noopener noreferrer"
         >
-          Download Resume
+          View Resume
         </a>
       </section>
 
