@@ -1,71 +1,49 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import "./App.css";
+import './App.css';
 
 function App() {
-
-  useEffect(() => {
-    AOS.init({ duration: 1000 });
-  }, []);
-
   return (
     <div>
 
-      {/* Navbar */}
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-        <div className="container">
-          <a className="navbar-brand" href="#">Harini</a>
-        </div>
-      </nav>
+      {/* NAVBAR */}
+      <header className="navbar">
+        <h2>Harini</h2>
+      </header>
 
-      {/* About */}
-      <section className="container text-center text-white mt-5 pt-5" data-aos="fade-up">
-        <h1 className="fw-bold">Hi, I'm Harini </h1>
-        <p className="mt-3">
-          Passionate Full Stack Developer building modern web applications.
+      {/* HERO SECTION */}
+      <section className="hero"></section>
+        <div className="hero-text">
+          <h1>Hi, I'm <span>Harini</span></h1>
+          <p>Full Stack Developer</p>
+           <a href={process.env.PUBLIC_URL + "/resume.pdf"}
+           target="_blank" 
+           rel="noreferrer" 
+           className="btn">
+            View Resume
+          </a>
+        </div>
+
+      {/* ABOUT SECTION */}
+      <section className="about">
+        <h2>About Me</h2>
+        <p>
+          I build modern web applications using Python and React.
+          I love creating attractive and responsive websites.
         </p>
       </section>
+         <section className="skills">
+  <h2>Skills</h2>
 
-      {/* Skills */}
-      <section className="container text-center text-white" data-aos="fade-up">
-        <h2 className="mb-4">Skills</h2>
-        <div className="row">
-
-          {[
-            "Python", "React", "JavaScript", "Django",
-            "FastAPI", "MySQL"
-          ].map((skill, index) => (
-            <div className="col-6 col-md-3 mb-4" key={index}>
-              <div className="skill-card">
-                {skill}
-              </div>
-            </div>
-          ))}
-
-        </div>
-      </section>
-
-      {/* Contact */}
-      <section className="container text-center text-white" data-aos="fade-up">
-        <h2>Contact</h2>
-        <p>Email: harini@email.com</p>
-
-        <a
-          href="resume.pdf"
-          className="btn btn-primary mt-3"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          View Resume
-        </a>
-      </section>
-
-      {/* Footer */}
-      <footer className="text-center text-white p-3">
-        © 2026 Harini | All Rights Reserved
-      </footer>
-
+  <div className="skill-box">Python</div>
+  <div className="skill-box">React</div>
+  <div className="skill-box">JavaScript</div>
+  <div className="skill-box">Html</div>
+  <div className="skill-box">CSS</div>
+</section>
+<section className="contact">
+  <h2>Contact Me</h2>
+  <p>Email: harinikathiresan2604@gmail.com</p>
+  <p>Phone: 1234567890</p>
+</section>
     </div>
   );
 }
